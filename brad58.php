@@ -27,13 +27,10 @@ if($stmt->num_rows>0){
         $ret->data[] = $row;
         }
 }else{
-    $ret->result = 'no date';
-
+    $ret->result = 'no data';
 }
-
-
 $stmt->free_result();
 $stmt->close();
- echo json_encode($ret);
+echo json_encode($ret);
 
 
